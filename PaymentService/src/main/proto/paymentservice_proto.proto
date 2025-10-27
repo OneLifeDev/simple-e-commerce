@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.onelifedev.grpc_order_servc_proto";
+option java_outer_classname = "OrderDetailsServiceProto";
+
+service OrderDetailsService {
+  rpc getOrderDetails (OrderDetailsRequest) returns (OrderDetailsResponse);
+}
+
+message OrderDetailsRequest {
+  string name = 1;
+}
+
+message OrderDetailsResponse {
+  string message = 1;
+}
